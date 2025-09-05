@@ -71,7 +71,7 @@ public class EmployeeServiceImpl implements EmployeeService {
                 .orElseThrow(() -> new EmployeeNotFoundException("Employee not found with id " + id));
         existingEmployee.setName(employee.getName());
         existingEmployee.setEmail(employee.getEmail());
-        existingEmployee.setPassword(employee.getPassword());
+        existingEmployee.setPassword(bCryptPasswordEncoder.encode(employee.getPassword()));
         existingEmployee.setRole(employee.getRole());
         return employeeRepository.save(existingEmployee);
     }
@@ -118,3 +118,4 @@ public class EmployeeServiceImpl implements EmployeeService {
         employeeRepository.deleteAll();
     }
 }
+
