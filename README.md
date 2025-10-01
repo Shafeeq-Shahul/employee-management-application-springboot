@@ -1,21 +1,41 @@
-# employee-management-application-springboot
-A simple CRUD (Create,  Read, Update, Delete) based springboot application. It enables to know about ORM - Spring data JPA, REST APIs and basics of Spring security.
+# Employee Management Application - Spring Boot
 
-### EmployeeController API Endpoints
+A simple CRUD (Create, Read, Update, Delete) based Spring Boot application.
+This project demonstrates:
 
-| HTTP Method | Endpoint Path | Description |
-| --- | --- | --- |
-| POST | `/emp/save` | Save a single employee |
-| POST | `/emp/saveAll` | Save multiple employees |
-| PUT | `/emp/update` | Update an existing employee |
-| GET | `/emp/getAll` | Retrieve all employees |
-| GET | `/emp/get?id={id}` | Retrieve employee by ID (query param) |
-| GET | `/emp/get/{email}` | Retrieve employee by email (path variable) |
-| DELETE | `/emp/delete?id={id}` | Delete employee by ID (query param) |
-| DELETE | `/emp/deleteAll` | Delete all employees |
+* ORM with Spring Data JPA
 
-## Clone the Repository
+* Building RESTful APIs
 
-```bash
-git clone https://github.com/Shafeeq-Shahul/employee-management-application-springboot.git
-cd employee-management-application-springboot
+* Basics of Spring Security
+
+# Technologies Used
+
+* Java 21
+
+* Spring Boot 3
+
+* Spring Data JPA
+
+* Spring Security (basic)
+
+* MySQL database
+
+* Maven
+
+# Project Structure
+
+```text
+src/
+└── main/
+    └── java/
+        └── com/example/employee/
+            ├── config/           → Spring Security configuration
+            ├── controller/       → REST Controllers
+            ├── dto/              → Data Transfer Objects
+            ├── exception/        → Custom exceptions and handlers
+            ├── mapper/           → Mapping logic between DTOs and entities
+            ├── model/            → Entity classes (e.g., Employee)
+            ├── repository/       → Spring Data JPA repositories
+            ├── service/          → Business logic layer
+            └── EmployeeManagementApplication.java  → Main Spring Boot class
